@@ -10,6 +10,14 @@ const UserList: FC = () => {
         fetchUsers();
     }, []);
 
+    if (isLoading) {
+        return <div>Loading...</div>
+    }
+
+    if (error) {
+        return <div>{error}</div>
+    }
+
     return (
         <div>
             {users.map(user =>
