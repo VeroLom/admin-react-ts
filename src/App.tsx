@@ -1,23 +1,16 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
-import UserListPage from "./pages/Users/UserListPage";
-import HomePage from "./pages/Users/HomePage";
+import {BrowserRouter} from "react-router-dom";
+import AppRouter from "./components/AppRouter";
+import Navbar from "./UI/Navbar/Navbar";
+import {routes} from "./routes";
 
 function App() {
     return (
         <div className="app">
             <BrowserRouter>
-                <div>
-                    <Link to={"/"}>Home</Link>
-                    <Link to={"/users"}>Users</Link>
-                </div>
-                <div>
-                    <Routes>
-                        <Route path={"/"} element={<HomePage />} />
-                        <Route path={"/users"} element={<UserListPage />} />
-                    </Routes>
-                </div>
+                <Navbar links={routes} />
+                <AppRouter />
             </BrowserRouter>
         </div>
     );
