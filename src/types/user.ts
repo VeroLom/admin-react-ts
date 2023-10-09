@@ -1,5 +1,13 @@
+export interface User {
+    id: number;
+    name: string;
+    login: string;
+    email: string;
+    phone?: string;
+}
+
 export interface UserState {
-    users: any[];
+    users: User[];
     isLoading: boolean;
     error: null | boolean;
 }

@@ -1,0 +1,16 @@
+.user__info {
+    display: flex;
+}
+
+.user__id {
+}
+.user__login {
+    margin-left: 5px;
+}
+.user__name {
+    margin-left: 5px;
+}
+
+.user__contact {
+    margin-top: 10px;
+}
